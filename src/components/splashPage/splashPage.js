@@ -1,6 +1,8 @@
 import React from 'react';
 
-const splashPage = (props) => (
+const SplashPage = (props) => (
 
-  <div>Welcome</div>
+  <div>Welcome!</div>
 )
+
+export default SplashPage;
