@@ -11,16 +11,15 @@ module.exports = {
   },
   module: {
     rules: [
-      test: /\.js$/,
-      exclude: /(node_modules)/,
-      loader: 'babel-loader',
-      options: {
-        presets: ['babel-preset-env', 'babel-preset-react']
+        {
+          test: /\.js$/,
+          exclude: /(node_modules)/,
+          loader: 'babel-loader'
       }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   },
   devServer: {
     historyApiFallback: true,
