@@ -19,6 +19,11 @@ app.use(morgan('dev'));
 app.use(bodyParser.json({ type: '*/*' }));
 router(app);
 
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, '..', '/index.html'));
+});
+
+
 
 // Server setup
 const port = process.env.PORT || 3000;
