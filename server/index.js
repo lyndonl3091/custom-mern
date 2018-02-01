@@ -1,9 +1,9 @@
 const express = require('express');
+const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const app = express();
-const router = require('./router');
 const mongoose = require('mongoose');
 
 // DB setup
@@ -17,7 +17,7 @@ mongoose.connect(mongoUrl, err => {
 // App setup
 app.use(morgan('dev'));
 app.use(bodyParser.json({ type: '*/*' }));
-router(app);
+app.use(express.static('public'))
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '..', '/index.html'));

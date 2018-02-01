@@ -1960,7 +1960,7 @@ _reactDom2.default.render(_react2.default.createElement(
   _reactRedux.Provider,
   { store: createStoreWithMiddleware(_reducers2.default) },
   _react2.default.createElement(_App2.default, null)
-), document.querySelector('#root'));
+), document.getElementById('root'));
 
 /***/ }),
 /* 30 */
